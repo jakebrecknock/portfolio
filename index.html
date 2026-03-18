@@ -30,12 +30,10 @@
           <button class="nav-link active" data-scroll="about">About</button>
           <button class="nav-link" data-scroll="projects">Projects</button>
           <button class="nav-link" data-scroll="classes">Classes</button>
-          <button class="nav-link" data-scroll="links">Links</button>
-          <button class="nav-link" data-scroll="contact">Contact</button>
+          <button class="nav-link" data-scroll="connect">Connect</button>
         </nav>
 
         <div class="topbar-actions">
-          <button class="command-trigger" id="commandTrigger">Quick Nav</button>
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             Menu
           </button>
@@ -46,30 +44,9 @@
         <button class="mobile-link" data-scroll="about">About</button>
         <button class="mobile-link" data-scroll="projects">Projects</button>
         <button class="mobile-link" data-scroll="classes">Classes</button>
-        <button class="mobile-link" data-scroll="links">Links</button>
-        <button class="mobile-link" data-scroll="contact">Contact</button>
+        <button class="mobile-link" data-scroll="connect">Connect</button>
       </div>
     </header>
-
-    <div class="command-palette hidden" id="commandPalette">
-      <div class="command-backdrop" id="commandBackdrop"></div>
-      <div class="command-modal">
-        <div class="command-header">
-          <span>Quick navigation</span>
-          <span class="command-hint">esc</span>
-        </div>
-        <div class="command-list">
-          <button class="command-item" data-scroll="about">Go to About</button>
-          <button class="command-item" data-scroll="projects">Go to Projects</button>
-          <button class="command-item" data-scroll="classes">Go to Classes</button>
-          <button class="command-item" data-scroll="links">Go to Links</button>
-          <button class="command-item" data-scroll="contact">Go to Contact</button>
-          <a class="command-item as-link" href="https://github.com/jakebrecknock" target="_blank" rel="noreferrer">Open GitHub</a>
-          <a class="command-item as-link" href="https://www.linkedin.com/in/jake-brecknock" target="_blank" rel="noreferrer">Open LinkedIn</a>
-          <a class="command-item as-link" href="resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
-        </div>
-      </div>
-    </div>
 
     <main id="home">
       <section class="hero section">
@@ -84,7 +61,7 @@
           <p class="hero-text">
             I’m Jake Brecknock — a Computer Science student at Grinnell College in the
             3-2 electrical engineering program. I like building software that is useful,
-            well-designed, and grounded in real-world problems.
+            technically sharp, and grounded in real-world problems.
           </p>
 
           <div class="typed-panel">
@@ -96,7 +73,8 @@
 
           <div class="hero-buttons">
             <button class="btn btn-primary" data-scroll="projects">Explore Work</button>
-            <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+            <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
+            <a class="btn btn-secondary" href="resume.pdf" download>Download Resume</a>
           </div>
         </div>
 
@@ -235,7 +213,11 @@
             </div>
             <h3>Functional Problem Solving</h3>
             <div class="class-body">
-              <p>Placeholder section for course projects, key concepts, and notable assignments.</p>
+              <p>
+                Built in Scamper, a Grinnell language derived from Racket. A standout project
+                was a learning rock-paper-scissors model that tracked a user’s past choices,
+                adapted over time, and adjusted its strategy to outperform baseline predictions.
+              </p>
             </div>
           </article>
 
@@ -246,7 +228,11 @@
             </div>
             <h3>Imperative Problem Solving</h3>
             <div class="class-body">
-              <p>Placeholder section for course projects, key concepts, and notable assignments.</p>
+              <p>
+                A C-based course centered on imperative programming and structured problem solving.
+                My final project was a polished Snake game that used image-based rendering to create
+                smoother gameplay and a more refined visual experience.
+              </p>
             </div>
           </article>
 
@@ -255,9 +241,13 @@
               <span>CSC 207</span>
               <button class="class-toggle">Open</button>
             </div>
-            <h3>Object-Oriented Problem Solving, Data Structures, and Algorithms</h3>
+            <h3>Algorithms and Object-Oriented Design</h3>
             <div class="class-body">
-              <p>Placeholder section for course projects, key concepts, and notable assignments.</p>
+              <p>
+                A Java-based course focused on object-oriented design, algorithms, and building
+                larger software systems. Notable work included agentic system design that supported
+                more advanced neural-network style behavior and decision-making structures.
+              </p>
             </div>
           </article>
 
@@ -266,9 +256,13 @@
               <span>CSC 211</span>
               <button class="class-toggle">Open</button>
             </div>
-            <h3>Computer Organization</h3>
+            <h3>Computer Organization and Architecture</h3>
             <div class="class-body">
-              <p>Placeholder section for course projects, key concepts, and notable assignments.</p>
+              <p>
+                Focused on low-level assembly programming, machine organization, and digital logic.
+                Major work included assembly code, architectural reasoning, and hands-on circuit work
+                involving registers, ALUs, and other hardware-level concepts.
+              </p>
             </div>
           </article>
 
@@ -277,9 +271,13 @@
               <span>MAT 215</span>
               <button class="class-toggle">Open</button>
             </div>
-            <h3>Applied Calculus / STEM Coursework</h3>
+            <h3>Linear Algebra</h3>
             <div class="class-body">
-              <p>Placeholder section for course projects, key concepts, and notable assignments.</p>
+              <p>
+                Developed a strong foundation in vector spaces, linear transformations, matrices,
+                eigenvalues, and structured mathematical reasoning. The course strengthened the type
+                of abstract thinking that translates directly into algorithms, systems, and modeling.
+              </p>
             </div>
           </article>
 
@@ -288,9 +286,13 @@
               <span>PHY 131</span>
               <button class="class-toggle">Open</button>
             </div>
-            <h3>Introductory Physics I</h3>
+            <h3>Physics I</h3>
             <div class="class-body">
-              <p>Placeholder section for labs, problem-solving, and major concepts.</p>
+              <p>
+                Built a foundation in mechanics, quantitative modeling, and structured physical reasoning.
+                The course emphasized translating real systems into solvable mathematical frameworks and
+                strengthened technical problem-solving under constraints.
+              </p>
             </div>
           </article>
 
@@ -301,19 +303,23 @@
             </div>
             <h3>Electricity and Magnetism</h3>
             <div class="class-body">
-              <p>Placeholder section for labs, problem-solving, and major concepts.</p>
+              <p>
+                Focused on electric fields, potential, circuits, capacitance, current, and magnetic effects.
+                This course ties directly into my electrical engineering interests by connecting theory with
+                circuit behavior, system analysis, and practical technical intuition.
+              </p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="links" class="section">
+      <section id="connect" class="section">
         <div class="section-heading reveal">
-          <div class="section-kicker">Links</div>
-          <h2>Professional presence</h2>
+          <div class="section-kicker">Connect</div>
+          <h2>Links, contact, and resume</h2>
         </div>
 
-        <div class="links-grid">
+        <div class="connect-grid">
           <a class="link-card glass-card spotlight-card reveal" href="https://github.com/jakebrecknock" target="_blank" rel="noreferrer">
             <div class="link-top">
               <h3>GitHub</h3>
@@ -330,56 +336,44 @@
             <p>Experience, background, and professional profile.</p>
           </a>
 
-          <a class="link-card glass-card spotlight-card reveal" href="resume.pdf" target="_blank" rel="noreferrer">
+          <a class="link-card glass-card spotlight-card reveal" href="mailto:jakebrecknock@icloud.com">
             <div class="link-top">
-              <h3>Resume PDF</h3>
+              <h3>Email</h3>
               <span>↗</span>
             </div>
-            <p>Drop your final resume PDF into the repo as <strong>resume.pdf</strong>.</p>
+            <p>jakebrecknock@icloud.com</p>
+          </a>
+
+          <div class="link-card glass-card spotlight-card reveal static-card">
+            <div class="link-top">
+              <h3>Phone</h3>
+              <span>•</span>
+            </div>
+            <p>(708) 378-3477</p>
+          </div>
+
+          <a class="link-card glass-card spotlight-card reveal" href="resume.pdf" target="_blank" rel="noreferrer">
+            <div class="link-top">
+              <h3>Open Resume</h3>
+              <span>↗</span>
+            </div>
+            <p>View the PDF directly in a new tab.</p>
+          </a>
+
+          <a class="link-card glass-card spotlight-card reveal" href="resume.pdf" download>
+            <div class="link-top">
+              <h3>Download Resume</h3>
+              <span>↗</span>
+            </div>
+            <p>Download the PDF file directly from the site.</p>
           </a>
         </div>
-      </section>
 
-      <section id="contact" class="section">
-        <div class="section-heading reveal">
-          <div class="section-kicker">Contact</div>
-          <h2>What I’m aiming for</h2>
-        </div>
-
-        <div class="two-col">
-          <div class="glass-card spotlight-card reveal">
-            <p>
-              I’m drawn to work where strong thinking, real responsibility, and useful
-              software all matter. I want to keep building systems that are technically
-              sharp, practical, and genuinely valuable.
-            </p>
-
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:jakebrecknock@icloud.com">Email Me</a>
-              <a class="btn btn-secondary" href="https://github.com/jakebrecknock" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-          </div>
-
-          <div class="glass-card spotlight-card reveal">
-            <div class="fact-list">
-              <div class="fact-row">
-                <span>Email</span>
-                <strong>jakebrecknock@icloud.com</strong>
-              </div>
-              <div class="fact-row">
-                <span>Phone</span>
-                <strong>(708) 378-3477</strong>
-              </div>
-              <div class="fact-row">
-                <span>LinkedIn</span>
-                <strong>linkedin.com/in/jake-brecknock</strong>
-              </div>
-              <div class="fact-row">
-                <span>GitHub</span>
-                <strong>github.com/jakebrecknock</strong>
-              </div>
-            </div>
-          </div>
+        <div class="resume-note glass-card reveal">
+          <p>
+            To make the resume links work on GitHub Pages, place your file in the root of
+            the repo and name it exactly <strong>resume.pdf</strong>.
+          </p>
         </div>
       </section>
     </main>

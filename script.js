@@ -51,9 +51,6 @@ const typedText = document.getElementById("typedText");
 const cursorGlow = document.getElementById("cursorGlow");
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
-const commandTrigger = document.getElementById("commandTrigger");
-const commandPalette = document.getElementById("commandPalette");
-const commandBackdrop = document.getElementById("commandBackdrop");
 
 const projectType = document.getElementById("projectType");
 const projectYear = document.getElementById("projectYear");
@@ -101,18 +98,34 @@ function runTypewriter() {
 
 runTypewriter();
 
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let glowX = mouseX;
+let glowY = mouseY;
+
 document.addEventListener("mousemove", (e) => {
-  cursorGlow.style.left = `${e.clientX}px`;
-  cursorGlow.style.top = `${e.clientY}px`;
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
 
+function animateGlow() {
+  glowX += (mouseX - glowX) * 0.12;
+  glowY += (mouseY - glowY) * 0.12;
+  cursorGlow.style.transform = `translate3d(${glowX - 120}px, ${glowY - 120}px, 0)`;
+  requestAnimationFrame(animateGlow);
+}
+
+if (window.innerWidth > 780) {
+  requestAnimationFrame(animateGlow);
+}
+
 function scrollToSection(id) {
-  const el = document.getElementById(id);
+  const targetId = id === "home" ? "home" : id;
+  const el = document.getElementById(targetId);
   if (el) {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
   mobileMenu.classList.remove("open");
-  closeCommandPalette();
 }
 
 document.querySelectorAll("[data-scroll]").forEach((item) => {
@@ -123,33 +136,6 @@ document.querySelectorAll("[data-scroll]").forEach((item) => {
 
 menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
-});
-
-function openCommandPalette() {
-  commandPalette.classList.remove("hidden");
-}
-
-function closeCommandPalette() {
-  commandPalette.classList.add("hidden");
-}
-
-commandTrigger.addEventListener("click", openCommandPalette);
-commandBackdrop.addEventListener("click", closeCommandPalette);
-
-document.addEventListener("keydown", (e) => {
-  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-    e.preventDefault();
-    if (commandPalette.classList.contains("hidden")) {
-      openCommandPalette();
-    } else {
-      closeCommandPalette();
-    }
-  }
-
-  if (e.key === "Escape") {
-    closeCommandPalette();
-    mobileMenu.classList.remove("open");
-  }
 });
 
 function setActiveProject(index) {
@@ -171,7 +157,10 @@ function setActiveProject(index) {
   document.querySelectorAll(".project-tab").forEach((tab) => {
     tab.classList.remove("active");
   });
-  document.querySelector(`.project-tab[data-project="${index}"]`)?.classList.add("active");
+
+  document
+    .querySelector(`.project-tab[data-project="${index}"]`)
+    ?.classList.add("active");
 }
 
 document.querySelectorAll(".project-tab").forEach((tab) => {
@@ -205,7 +194,7 @@ const observer = new IntersectionObserver(
 
 revealItems.forEach((item) => observer.observe(item));
 
-const sections = ["about", "projects", "classes", "links", "contact"];
+const sections = ["about", "projects", "classes", "connect"];
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
