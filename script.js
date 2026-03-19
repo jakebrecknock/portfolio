@@ -6,11 +6,21 @@ const typedLines = [
 
 const projects = [
   {
+    type: "Personal Project",
+    year: "Present",
+    title: "Stack Index",
+    description:
+      "I am working to create a site where people can upload their coding projects (be that vibe coded or life long passion projects). People would then be able to tag these projects with pertinent categories and allow others to check my database before they take the time to duplicate of an already existing solution.",
+    tags: ["Backend development, Real world solutions, Java, Personal passions"],
+    impact:
+      "This project strives to implement AI as a means of saving users from recreating existing ideas so that their time can be used more efficienctly"
+  },
+  {
     type: "Professional Project",
     year: "Summer 2025",
     title: "ACE Live Estimate Platform",
     description:
-      "Created and implemented a JavaScript website for ACE Handyman Services that produces and stores live estimates for the field manager and craftsmen. The platform is designed to make estimating faster, more usable, and more differentiated than competitors.",
+      "Created and implemented a JavaScript website for ACE Handyman Services that produces and stores live estimates for the field manager and craftsmen. While working for AHS, I noticed there was a chance to optimize their quote generation. Instead of spending time and effort drafting estimates by hand, my website allowed for instant customer facing reports to be generated. This solution is still used by Ace Handyman Services, and, more importantly, ONLY Ace Handyman Services - a true business advantage",
     tags: ["JavaScript", "Firebase", "HTML", "CSS", "Operational Software"],
     impact:
       "This project created a real business advantage by enabling live estimates and improving the speed and quality of the estimating process."
