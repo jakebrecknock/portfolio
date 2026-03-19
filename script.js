@@ -10,7 +10,7 @@ const projects = [
     year: "Present",
     title: "Stack Index",
     description:
-      "I am working to create a site where people can upload their coding projects (be that vibe coded or life long passion projects). People would then be able to tag these projects with pertinent categories and allow others to check my database before they take the time to duplicate of an already existing solution. Check it out: jakebrecknock.github.io/stackindex/",
+      "I am working to create a site where people can upload their coding projects (be that vibe coded or life long passion projects). People would then be able to tag these projects with pertinent categories and allow others to check my database before they take the time to duplicate of an already existing solution. <a href='https://jakebrecknock.github.io/stackindex/' target='_blank'>stackindex</a>",
     tags: ["Backend development, Real world solutions, Java, Personal passions"],
     impact:
       "This project strives to implement AI as a means of saving users from recreating existing ideas so that their time can be used more efficienctly"
