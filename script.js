@@ -1,7 +1,7 @@
 const typedLines = [
   "Building software with clarity.",
   "Creating tools people actually use.",
-  "Computer science, systems, and real-world engineering."
+  "Finding ways to optimize real systems"
 ];
 
 const projects = [
